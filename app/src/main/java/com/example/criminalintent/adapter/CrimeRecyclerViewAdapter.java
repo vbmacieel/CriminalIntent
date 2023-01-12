@@ -7,22 +7,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.criminalintent.CrimeActivity;
+import com.example.criminalintent.ui.activity.CrimePagerActivity;
 import com.example.criminalintent.R;
 import com.example.criminalintent.model.Crime;
 
 import java.util.List;
 
-public class CrimeAdapter extends RecyclerView.Adapter<CrimeAdapter.CrimeHolder>{
+public class CrimeRecyclerViewAdapter extends RecyclerView.Adapter<CrimeRecyclerViewAdapter.CrimeHolder>{
 
     private final List<Crime> mCrimeList;
 
-    public CrimeAdapter(List<Crime> crimeList) {
+    public CrimeRecyclerViewAdapter(List<Crime> crimeList) {
         mCrimeList = crimeList;
     }
 
@@ -64,7 +63,7 @@ public class CrimeAdapter extends RecyclerView.Adapter<CrimeAdapter.CrimeHolder>
         @Override
         public void onClick(View view) {
             Context context = view.getContext();
-            Intent intent = CrimeActivity.newIntent(context, mCrime.getId());
+            Intent intent = CrimePagerActivity.newIntent(context, mCrime.getId());
             context.startActivity(intent);
         }
 

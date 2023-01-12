@@ -1,11 +1,11 @@
-package com.example.criminalintent;
+package com.example.criminalintent.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.criminalintent.fragments.CrimeFragment;
+import com.example.criminalintent.ui.fragments.CrimeFragment;
 
 import java.util.UUID;
 

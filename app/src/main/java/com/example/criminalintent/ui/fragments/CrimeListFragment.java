@@ -1,24 +1,19 @@
-package com.example.criminalintent.fragments;
+package com.example.criminalintent.ui.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.criminalintent.CrimeLab;
+import com.example.criminalintent.repository.CrimeLab;
 import com.example.criminalintent.R;
-import com.example.criminalintent.adapter.CrimeAdapter;
+import com.example.criminalintent.adapter.CrimeRecyclerViewAdapter;
 import com.example.criminalintent.model.Crime;
 
 import java.util.List;
@@ -26,7 +21,7 @@ import java.util.List;
 public class CrimeListFragment extends Fragment {
 
     private RecyclerView mCrimeRecyclerView;
-    private CrimeAdapter mCrimeAdapter;
+    private CrimeRecyclerViewAdapter mCrimeAdapter;
 
     @Nullable
     @Override
@@ -50,7 +45,7 @@ public class CrimeListFragment extends Fragment {
         List<Crime> crimes = crimeLab.getCrimes();
 
         if (mCrimeAdapter == null){
-            mCrimeAdapter = new CrimeAdapter(crimes);
+            mCrimeAdapter = new CrimeRecyclerViewAdapter(crimes);
             mCrimeRecyclerView.setAdapter(mCrimeAdapter);
         } else {
             mCrimeAdapter.notifyDataSetChanged();

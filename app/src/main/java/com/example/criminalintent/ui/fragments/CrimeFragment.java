@@ -1,4 +1,4 @@
-package com.example.criminalintent.fragments;
+package com.example.criminalintent.ui.fragments;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,12 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.criminalintent.CrimeActivity;
-import com.example.criminalintent.CrimeLab;
+import com.example.criminalintent.repository.CrimeLab;
 import com.example.criminalintent.R;
 import com.example.criminalintent.model.Crime;
 
-import java.util.Objects;
 import java.util.UUID;
 
 public class CrimeFragment extends Fragment {

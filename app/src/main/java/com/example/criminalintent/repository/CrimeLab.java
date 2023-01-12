@@ -1,4 +1,4 @@
-package com.example.criminalintent;
+package com.example.criminalintent.repository;
 
 import android.content.Context;
 
